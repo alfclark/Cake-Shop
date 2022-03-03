@@ -1,5 +1,14 @@
+@font-face { 
+  font-family: Junitta; src: url('/extras/Junitta-BW55G.otf'); 
+}
+
+:root{
+  --purple: #6242c1bb;
+  --beige: #FCF8F8;
+}
+
 body{
-  background-color: #FCF8F8;
+  background-color: var(--beige);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -7,13 +16,18 @@ a{
   text-decoration: none;
 }
 
-nav {
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  margin-top: 1rem;
+  padding-top: 1rem;
+  border: none;
+  position: fixed;
+  top: 0;
+  background-color: var(--beige);
+  z-index: 2;
 }
 
 .nav-logo{
@@ -28,6 +42,7 @@ nav {
   display: flex;
   flex-direction: row;
   list-style: none;
+  text-align: center;
 }
 
 .menu-item {
@@ -35,13 +50,10 @@ nav {
   color: #000000; 
   font-size: 1.1rem;
   font-weight: bold;
-  display: inline-block;
-  position: relative;
 }
 
-
 .menu-item:hover{
-  color: #6142C1;
+  color: var(--purple);
   transition: .6s;
 }
 
@@ -55,10 +67,44 @@ nav {
 }
 
 .fa-cart-shopping:hover {
-  color: #6142C1;
+  color: var(--purple);
   transition: .6s;
 }
 
-hr.dashed {
-  border-top: 3px dashed #6142C1;
+.showcase{
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+.build-title {
+  font-family: Junitta;
+  font-size: 5rem;
+}
+
+.build-btn {
+  background-color: var(--purple);
+  font-size: 2rem;
+  border: none;
+  color: var(--beige);
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 2rem;
+  position: absolute;
+  right: 15vh;
+  bottom: 20vh;
+}
+
+.build-btn:hover{
+  color: var(--beige);
+  background-color: #000000;
+  transition: .6s;
+}
+
+.cake{
+  width: 70%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
 }
