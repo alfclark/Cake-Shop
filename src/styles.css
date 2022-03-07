@@ -50,11 +50,13 @@ a{
   color: #000000; 
   font-size: 1.1rem;
   font-weight: bold;
+  border-bottom: #000000 solid;
 }
 
 .menu-item:hover{
   color: var(--purple);
   transition: .6s;
+  border-bottom: var(--purple) solid ;
 }
 
 .nav-cart {
