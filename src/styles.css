@@ -82,6 +82,7 @@ a{
 .build-title {
   font-family: Junitta;
   font-size: 5rem;
+  height: fit-content;
 }
 
 .build-btn {
@@ -109,4 +110,26 @@ a{
   bottom: 0;
   left: 0;
   height: 100vh;
+}
+
+@media screen and (max-width: 760px) {
+  .cake {
+    display: none;
+  }
+  .build-btn{
+    position: relative;
+    right: auto;
+    left: auto;
+    bottom: 5vh;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .build-title {
+    font-size: 3rem;
+  }
+  .showcase {
+    margin-top: 40vh;
+    align-items: center;
+  }
 }
