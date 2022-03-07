@@ -1,3 +1,3 @@
 ## EX2 - LaunchX Front-end web development
 
-[Live Preview](https://alfclark.github.io/Cake-Shop/)
+[Live Preview](https://nervous-johnson-31bbd1.netlify.app/)
