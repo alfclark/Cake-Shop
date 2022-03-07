@@ -5,6 +5,7 @@
 :root{
   --purple: #6242c1bb;
   --beige: #FCF8F8;
+  --yellow:  #f2b233;
 }
 
 body{
@@ -16,23 +17,26 @@ a{
   text-decoration: none;
 }
 
+
+/* ANIMATIONS */
+@keyframes bounce1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* NAVBAR */
 .navbar {
   display: flex;
-  flex-direction: row;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  padding-top: 1rem;
-  border: none;
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: var(--beige);
   z-index: 2;
 }
 
-.nav-logo{
-  padding-left: 3rem;
-}
 
 .logo {
   width: 4rem;
@@ -64,7 +68,7 @@ a{
 }
 
 .fa-cart-shopping{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #000000;
 }
 
@@ -73,29 +77,33 @@ a{
   transition: .6s;
 }
 
+/* BUILD YOUR CAKE SHOWCASE */
 .showcase{
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 100%;
   text-align: center;
-  border: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .build-title {
   font-family: Junitta;
   font-size: 5rem;
+  font-weight: 300;
   height: fit-content;
 }
 
 .build-btn {
   background-color: var(--purple);
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: none;
   color: var(--beige);
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 2rem;
-  position: absolute;
-  right: 15vh;
-  bottom: 20vh;
 }
 
 .build-btn:hover{
@@ -104,23 +112,39 @@ a{
   transition: .6s;
 }
 
-.cake{
-  width: 70%;
+.scroll-me {
+  font-size: 1rem;
+  width: 15%;
+  height: fit-content;
+  text-align: center;
+  justify-content: center;
+  animation: bounce1 2s infinite, show1 5s forwards;
   position: absolute;
   bottom: 0;
-  left: 0;
-  height: 100vh;
+  right: 1rem;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 2rem;
+  background-color: var(--yellow);
+  box-shadow: 5px #00000075;
 }
 
+.scroll-text {
+  color: black;
+  font-weight: bold;
+}
+
+.banner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 90%;
+}
+
+/* RESPONSIVE CONFIG */
 @media screen and (max-width: 760px) {
-  .cake {
-    display: none;
-  }
   .build-btn{
-    position: relative;
-    right: auto;
-    left: auto;
-    bottom: 5vh;
+    font-size: 1rem;
   }
   .navbar-menu {
     display: none;
@@ -129,7 +153,10 @@ a{
     font-size: 3rem;
   }
   .showcase {
-    margin-top: 40vh;
     align-items: center;
+  }
+  .scroll-me{
+    width: auto;
+    font-size: 1rem;
   }
 }
